@@ -10,3 +10,6 @@
 
 // range version
 pragma solidity >= 0.7.0 < 0.9.0;
+
+// reference for solidity version releases
+// Link: https://github.com/ethereum/solidity/releases
