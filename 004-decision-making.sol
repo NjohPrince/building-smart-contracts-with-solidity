@@ -23,4 +23,16 @@ contract learnDecisionMaking {
             return true;
         }
     }
+
+    // exercise
+    uint256 stakingWallet = 10;
+
+    // stake more and ge more, stake less you get less
+    function airDrop() public view returns (uint256) {
+        if (stakingWallet == 10) {
+            return stakingWallet + 10;
+        } else {
+            return stakingWallet + 1;
+        }
+    }
 }

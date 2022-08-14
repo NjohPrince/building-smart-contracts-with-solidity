@@ -26,4 +26,3 @@ key, to add when we want to deal or bring up an account itself we work with the
 nonce value, which is derived from the creator address and the number of
 transactions sent from the address.
 
-

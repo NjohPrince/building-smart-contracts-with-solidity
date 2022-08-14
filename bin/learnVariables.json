@@ -4,8 +4,8 @@
     "metadata": "{\"compiler\":{\"version\":\"0.8.16+commit.07a7930e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/TheUnicornDev237/Desktop/solidity/building-smart-contracts-with-solidity/002-variable-and-types.sol\":\"learnVariables\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/TheUnicornDev237/Desktop/solidity/building-smart-contracts-with-solidity/002-variable-and-types.sol\":{\"keccak256\":\"0xa4e104ad418265e2c0eccc32bed2d72c0f5d169257626b079b26c386043f97c7\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://a5bf9cc84d754bc74aeccc2e50d6b0d379f1d7791276835df853acbbbf4b9875\",\"dweb:/ipfs/QmcgynZbYzbNQFvLCUYvtzfGANg8axf7xpVouRVGztE84K\"]}},\"version\":1}",
     "bytecode": "606460005560c0604052600d60809081526c283934b731b290253ab734b7b960991b60a0526001906100319082610175565b5060408051808201909152600c81526b2737ba1030b71020b236b4b760a11b60208201526002906100629082610175565b506003805460ff1990811660011790915561012c60045560058054909116905560408051808201909152601c81527f596f75207370656e7420616e20616d6f756e74206f66206d6f6e65790000000060208201526006906100c39082610175565b503480156100d057600080fd5b50610234565b634e487b7160e01b600052604160045260246000fd5b600181811c9082168061010057607f821691505b60208210810361012057634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561017057600081815260208120601f850160051c8101602086101561014d5750805b601f850160051c820191505b8181101561016c57828155600101610159565b5050505b505050565b81516001600160401b0381111561018e5761018e6100d6565b6101a28161019c84546100ec565b84610126565b602080601f8311600181146101d757600084156101bf5750858301515b600019600386901b1c1916600185901b17855561016c565b600085815260208120601f198616915b82811015610206578886015182559484019460019091019084016101e7565b50858210156102245787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b603f806102426000396000f3fe6080604052600080fdfea2646970667358221220465f32a8382c0c42dc5fdb3c358953ed4127a48b91a1c2fe9b17a0cdcdeb8eae64736f6c63430008100033",
     "deployedBytecode": "6080604052600080fdfea2646970667358221220465f32a8382c0c42dc5fdb3c358953ed4127a48b91a1c2fe9b17a0cdcdeb8eae64736f6c63430008100033",
-    "sourceMap": "782:3:0:-:0;759:26;;819:35;662:423;819:35;;662:423;819:35;;;-1:-1:-1;;;819:35:0;;;;;;;;:::i;:::-;-1:-1:-1;861:36:0;;;;;;;;;;;;-1:-1:-1;;;861:36:0;;;;;;;;;;:::i;:::-;-1:-1:-1;931:19:0;;;-1:-1:-1;;931:19:0;;;946:4;931:19;;;;993:3;976:20;;1003:18;;;;;;;;1028:53;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;662:423;;;;;;;;;;;;14:127:1;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:380;225:1;221:12;;;;268;;;289:61;;343:4;335:6;331:17;321:27;;289:61;396:2;388:6;385:14;365:18;362:38;359:161;;442:10;437:3;433:20;430:1;423:31;477:4;474:1;467:15;505:4;502:1;495:15;359:161;;146:380;;;:::o;657:545::-;759:2;754:3;751:11;748:448;;;795:1;820:5;816:2;809:17;865:4;861:2;851:19;935:2;923:10;919:19;916:1;912:27;906:4;902:38;971:4;959:10;956:20;953:47;;;-1:-1:-1;994:4:1;953:47;1049:2;1044:3;1040:12;1037:1;1033:20;1027:4;1023:31;1013:41;;1104:82;1122:2;1115:5;1112:13;1104:82;;;1167:17;;;1148:1;1137:13;1104:82;;;1108:3;;;748:448;657:545;;;:::o;1378:1352::-;1498:10;;-1:-1:-1;;;;;1520:30:1;;1517:56;;;1553:18;;:::i;:::-;1582:97;1672:6;1632:38;1664:4;1658:11;1632:38;:::i;:::-;1626:4;1582:97;:::i;:::-;1734:4;;1798:2;1787:14;;1815:1;1810:663;;;;2517:1;2534:6;2531:89;;;-1:-1:-1;2586:19:1;;;2580:26;2531:89;-1:-1:-1;;1335:1:1;1331:11;;;1327:24;1323:29;1313:40;1359:1;1355:11;;;1310:57;2633:81;;1780:944;;1810:663;604:1;597:14;;;641:4;628:18;;-1:-1:-1;;1846:20:1;;;1964:236;1978:7;1975:1;1972:14;1964:236;;;2067:19;;;2061:26;2046:42;;2159:27;;;;2127:1;2115:14;;;;1994:19;;1964:236;;;1968:3;2228:6;2219:7;2216:19;2213:201;;;2289:19;;;2283:26;-1:-1:-1;;2372:1:1;2368:14;;;2384:3;2364:24;2360:37;2356:42;2341:58;2326:74;;2213:201;-1:-1:-1;;;;;2460:1:1;2444:14;;;2440:22;2427:36;;-1:-1:-1;1378:1352:1:o;:::-;662:423:0;;;;;;",
-    "deployedSourceMap": "662:423:0:-:0;;;;;",
+    "sourceMap": "782:3:1:-:0;759:26;;819:35;662:423;819:35;;662:423;819:35;;;-1:-1:-1;;;819:35:1;;;;;;;;:::i;:::-;-1:-1:-1;861:36:1;;;;;;;;;;;;-1:-1:-1;;;861:36:1;;;;;;;;;;:::i;:::-;-1:-1:-1;931:19:1;;;-1:-1:-1;;931:19:1;;;946:4;931:19;;;;993:3;976:20;;1003:18;;;;;;;;1028:53;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;662:423;;;;;;;;;;;;14:127:4;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:380;225:1;221:12;;;;268;;;289:61;;343:4;335:6;331:17;321:27;;289:61;396:2;388:6;385:14;365:18;362:38;359:161;;442:10;437:3;433:20;430:1;423:31;477:4;474:1;467:15;505:4;502:1;495:15;359:161;;146:380;;;:::o;657:545::-;759:2;754:3;751:11;748:448;;;795:1;820:5;816:2;809:17;865:4;861:2;851:19;935:2;923:10;919:19;916:1;912:27;906:4;902:38;971:4;959:10;956:20;953:47;;;-1:-1:-1;994:4:4;953:47;1049:2;1044:3;1040:12;1037:1;1033:20;1027:4;1023:31;1013:41;;1104:82;1122:2;1115:5;1112:13;1104:82;;;1167:17;;;1148:1;1137:13;1104:82;;;1108:3;;;748:448;657:545;;;:::o;1378:1352::-;1498:10;;-1:-1:-1;;;;;1520:30:4;;1517:56;;;1553:18;;:::i;:::-;1582:97;1672:6;1632:38;1664:4;1658:11;1632:38;:::i;:::-;1626:4;1582:97;:::i;:::-;1734:4;;1798:2;1787:14;;1815:1;1810:663;;;;2517:1;2534:6;2531:89;;;-1:-1:-1;2586:19:4;;;2580:26;2531:89;-1:-1:-1;;1335:1:4;1331:11;;;1327:24;1323:29;1313:40;1359:1;1355:11;;;1310:57;2633:81;;1780:944;;1810:663;604:1;597:14;;;641:4;628:18;;-1:-1:-1;;1846:20:4;;;1964:236;1978:7;1975:1;1972:14;1964:236;;;2067:19;;;2061:26;2046:42;;2159:27;;;;2127:1;2115:14;;;;1994:19;;1964:236;;;1968:3;2228:6;2219:7;2216:19;2213:201;;;2289:19;;;2283:26;-1:-1:-1;;2372:1:4;2368:14;;;2384:3;2364:24;2360:37;2356:42;2341:58;2326:74;;2213:201;-1:-1:-1;;;;;2460:1:4;2444:14;;;2440:22;2427:36;;-1:-1:-1;1378:1352:4:o;:::-;662:423:1;;;;;;",
+    "deployedSourceMap": "662:423:1:-:0;;;;;",
     "sourcePath": "c:/Users/TheUnicornDev237/Desktop/solidity/building-smart-contracts-with-solidity/002-variable-and-types.sol",
     "compiler": {
         "name": "solc",
@@ -15,15 +15,15 @@
         "absolutePath": "c:/Users/TheUnicornDev237/Desktop/solidity/building-smart-contracts-with-solidity/002-variable-and-types.sol",
         "exportedSymbols": {
             "learnVariables": [
-                23
+                25
             ]
         },
-        "id": 24,
+        "id": 26,
         "license": "GPL-3.0",
         "nodeType": "SourceUnit",
         "nodes": [
             {
-                "id": 1,
+                "id": 3,
                 "literals": [
                     "solidity",
                     ">=",
@@ -34,7 +34,7 @@
                     ".0"
                 ],
                 "nodeType": "PragmaDirective",
-                "src": "39:31:0"
+                "src": "39:31:1"
             },
             {
                 "abstract": false,
@@ -43,23 +43,23 @@
                 "contractDependencies": [],
                 "contractKind": "contract",
                 "fullyImplemented": true,
-                "id": 23,
+                "id": 25,
                 "linearizedBaseContracts": [
-                    23
+                    25
                 ],
                 "name": "learnVariables",
-                "nameLocation": "671:14:0",
+                "nameLocation": "671:14:1",
                 "nodeType": "ContractDefinition",
                 "nodes": [
                     {
                         "constant": false,
-                        "id": 4,
+                        "id": 6,
                         "mutability": "mutable",
                         "name": "chocolateBar",
-                        "nameLocation": "767:12:0",
+                        "nameLocation": "767:12:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "759:26:0",
+                        "scope": 25,
+                        "src": "759:26:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -67,10 +67,10 @@
                             "typeString": "uint256"
                         },
                         "typeName": {
-                            "id": 2,
+                            "id": 4,
                             "name": "uint256",
                             "nodeType": "ElementaryTypeName",
-                            "src": "759:7:0",
+                            "src": "759:7:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -78,14 +78,14 @@
                         },
                         "value": {
                             "hexValue": "313030",
-                            "id": 3,
+                            "id": 5,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "782:3:0",
+                            "src": "782:3:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_rational_100_by_1",
                                 "typeString": "int_const 100"
@@ -96,13 +96,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 7,
+                        "id": 9,
                         "mutability": "mutable",
                         "name": "storeOwner",
-                        "nameLocation": "826:10:0",
+                        "nameLocation": "826:10:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "819:35:0",
+                        "scope": 25,
+                        "src": "819:35:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -110,10 +110,10 @@
                             "typeString": "string"
                         },
                         "typeName": {
-                            "id": 5,
+                            "id": 7,
                             "name": "string",
                             "nodeType": "ElementaryTypeName",
-                            "src": "819:6:0",
+                            "src": "819:6:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_string_storage_ptr",
                                 "typeString": "string"
@@ -121,14 +121,14 @@
                         },
                         "value": {
                             "hexValue": "5072696e6365204a756e696f72",
-                            "id": 6,
+                            "id": 8,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "string",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "839:15:0",
+                            "src": "839:15:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_stringliteral_16dbe9034d9ec60e1924c01184f3f1aab4dff35d69f140992d42f6d2d1eddf52",
                                 "typeString": "literal_string \"Prince Junior\""
@@ -139,13 +139,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 10,
+                        "id": 12,
                         "mutability": "mutable",
                         "name": "errorMessage",
-                        "nameLocation": "868:12:0",
+                        "nameLocation": "868:12:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "861:36:0",
+                        "scope": 25,
+                        "src": "861:36:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -153,10 +153,10 @@
                             "typeString": "string"
                         },
                         "typeName": {
-                            "id": 8,
+                            "id": 10,
                             "name": "string",
                             "nodeType": "ElementaryTypeName",
-                            "src": "861:6:0",
+                            "src": "861:6:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_string_storage_ptr",
                                 "typeString": "string"
@@ -164,14 +164,14 @@
                         },
                         "value": {
                             "hexValue": "4e6f7420616e2041646d696e",
-                            "id": 9,
+                            "id": 11,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "string",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "883:14:0",
+                            "src": "883:14:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_stringliteral_d835ee4576d3df54448bec41bfbecbd5de1dbefae61261264de4ee992310bc8c",
                                 "typeString": "literal_string \"Not an Admin\""
@@ -182,13 +182,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 13,
+                        "id": 15,
                         "mutability": "mutable",
                         "name": "isAdmin",
-                        "nameLocation": "936:7:0",
+                        "nameLocation": "936:7:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "931:19:0",
+                        "scope": 25,
+                        "src": "931:19:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -196,10 +196,10 @@
                             "typeString": "bool"
                         },
                         "typeName": {
-                            "id": 11,
+                            "id": 13,
                             "name": "bool",
                             "nodeType": "ElementaryTypeName",
-                            "src": "931:4:0",
+                            "src": "931:4:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -207,14 +207,14 @@
                         },
                         "value": {
                             "hexValue": "74727565",
-                            "id": 12,
+                            "id": 14,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "bool",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "946:4:0",
+                            "src": "946:4:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -225,13 +225,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 16,
+                        "id": 18,
                         "mutability": "mutable",
                         "name": "wallet",
-                        "nameLocation": "984:6:0",
+                        "nameLocation": "984:6:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "976:20:0",
+                        "scope": 25,
+                        "src": "976:20:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -239,10 +239,10 @@
                             "typeString": "uint256"
                         },
                         "typeName": {
-                            "id": 14,
+                            "id": 16,
                             "name": "uint256",
                             "nodeType": "ElementaryTypeName",
-                            "src": "976:7:0",
+                            "src": "976:7:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -250,14 +250,14 @@
                         },
                         "value": {
                             "hexValue": "333030",
-                            "id": 15,
+                            "id": 17,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "993:3:0",
+                            "src": "993:3:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_rational_300_by_1",
                                 "typeString": "int_const 300"
@@ -268,13 +268,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 19,
+                        "id": 21,
                         "mutability": "mutable",
                         "name": "spent",
-                        "nameLocation": "1008:5:0",
+                        "nameLocation": "1008:5:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "1003:18:0",
+                        "scope": 25,
+                        "src": "1003:18:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -282,10 +282,10 @@
                             "typeString": "bool"
                         },
                         "typeName": {
-                            "id": 17,
+                            "id": 19,
                             "name": "bool",
                             "nodeType": "ElementaryTypeName",
-                            "src": "1003:4:0",
+                            "src": "1003:4:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -293,14 +293,14 @@
                         },
                         "value": {
                             "hexValue": "66616c7365",
-                            "id": 18,
+                            "id": 20,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "bool",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "1016:5:0",
+                            "src": "1016:5:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -311,13 +311,13 @@
                     },
                     {
                         "constant": false,
-                        "id": 22,
+                        "id": 24,
                         "mutability": "mutable",
                         "name": "notififySpend",
-                        "nameLocation": "1035:13:0",
+                        "nameLocation": "1035:13:1",
                         "nodeType": "VariableDeclaration",
-                        "scope": 23,
-                        "src": "1028:53:0",
+                        "scope": 25,
+                        "src": "1028:53:1",
                         "stateVariable": true,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -325,10 +325,10 @@
                             "typeString": "string"
                         },
                         "typeName": {
-                            "id": 20,
+                            "id": 22,
                             "name": "string",
                             "nodeType": "ElementaryTypeName",
-                            "src": "1028:6:0",
+                            "src": "1028:6:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_string_storage_ptr",
                                 "typeString": "string"
@@ -336,14 +336,14 @@
                         },
                         "value": {
                             "hexValue": "596f75207370656e7420616e20616d6f756e74206f66206d6f6e6579",
-                            "id": 21,
+                            "id": 23,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "string",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "1051:30:0",
+                            "src": "1051:30:1",
                             "typeDescriptions": {
                                 "typeIdentifier": "t_stringliteral_5ba5cc0b30fadda50a3f9509920af8e03211364374be01ecb9156fae107cc719",
                                 "typeString": "literal_string \"You spent an amount of money\""
@@ -353,12 +353,12 @@
                         "visibility": "internal"
                     }
                 ],
-                "scope": 24,
-                "src": "662:423:0",
+                "scope": 26,
+                "src": "662:423:1",
                 "usedErrors": []
             }
         ],
-        "src": "39:1048:0"
+        "src": "39:1048:1"
     },
     "functionHashes": {},
     "gasEstimates": {
