@@ -17,11 +17,25 @@ contract learnFunctions {
     // examples
     function remoteControlOpen(bool closedDoor) public returns (bool) {}
 
+    // state variables
+    // uint defaultValue = 5;
+
     function addValues() public pure returns (uint256) {
+        // local variables - scope: only valid or accessible within the this function
         uint256 a = 2;
         uint256 b = 3;
         uint256 result = a + b;
 
+        return result;
+    }
+
+    // function with parameters
+    function multiplyValues(uint256 a, uint256 b)
+        public
+        pure
+        returns (uint256)
+    {
+        uint256 result = a * b;
         return result;
     }
 }
