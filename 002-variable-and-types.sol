@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >= 0.7.0 < 0.9.0;
+pragma solidity >=0.7.0 <0.9.0;
 
 // variables are used to store information to be referenced
 // or manipulated by our program
@@ -19,7 +19,7 @@ contract learnVariables {
     // our solidity code
 
     // declaring an integer variable
-    uint chocolateBar = 100;
+    uint256 chocolateBar = 100;
 
     // string variables
     string storeOwner = "Prince Junior";
@@ -27,4 +27,9 @@ contract learnVariables {
 
     // boolean variable
     bool isAdmin = true;
+
+    // exercise
+    uint256 wallet = 300;
+    bool spent = false;
+    string notififySpend = "You spent an amount of money";
 }
