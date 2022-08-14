@@ -1,0 +1,29 @@
+Ethereum Virtual Machine
+- A runtime environment for smart contracts in ethereum.
+- It is not only sandboxed but isolated, has no access to network file systems
+- or any other processes.
+- Smart contracts has limited access to other smart contracts.
+
+The Ethereum protocol itself exists solely for the purpose of keeping the 
+continuous, uninterrupted, and immutable operation of this special state 
+machine; It's the environment in which all Ethereum accounts and smart 
+contracts live. At any given block in the chain, Ethereum has one and only 
+one 'canonical' state, and the EVM is what defines the rules for computing 
+a new valid state from block to block.
+
+Two types of accounts exist for smart contracts
+
+External accounts
+- Belongs to investors or to the holders
+- The address of the contract is determined by a Public key
+
+Contracts accounts
+- Build and controlled by the developers
+- Key determined when the contract is being created
+
+When transfering ethers from one account to another we make use of the public
+key, to add when we want to deal or bring up an account itself we work with the
+nonce value, which is derived from the creator address and the number of
+transactions sent from the address.
+
+
