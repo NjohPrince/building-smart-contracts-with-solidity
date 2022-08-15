@@ -42,4 +42,10 @@ contract learnArithmeticOperators {
         }
         return result;
     }
+
+    function calculatorGetRemainder() public view returns (uint256) {
+        uint256 result;
+        result = a % b;
+        return result;
+    }
 }
