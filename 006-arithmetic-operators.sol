@@ -58,4 +58,12 @@ contract learnArithmeticOperators {
         3. 0 * 23 = 0, newResult = 0
         4. 12 - 0, remainder = 0
     */
+
+    function calculatorIncrement() public returns (uint256) {
+        return a++;
+    }
+
+    function calculatorExpression() public view returns (uint256) {
+        return (a + b) * 3 - 10;
+    }
 }
