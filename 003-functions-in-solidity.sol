@@ -10,7 +10,7 @@ pragma solidity >=0.7.0 <0.9.0;
 // A function is a group of code that can be called anywhere within your program
 // Eliminating the possibility of writing thesame block of code many times
 
-contract learnFunctions {
+contract LearnFunctions {
     // syntax
     // function functionName(parameter list) scope returns(return type) { statements }
 

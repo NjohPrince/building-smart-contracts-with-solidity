@@ -15,7 +15,7 @@ pragma solidity >=0.7.0 <0.9.0;
 // walletAmount = integer, total amount in users wallet
 // errorMessage = a string containing a description of what went wrong
 
-contract learnVariables {
+contract LearnVariables {
     // our solidity code
 
     // declaring an integer variable

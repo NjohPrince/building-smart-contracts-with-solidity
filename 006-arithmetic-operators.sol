@@ -4,12 +4,12 @@ pragma solidity >=0.7.0 <0.9.0;
 
 /**
  * Learn about arithmetic operators in solidity
- * operators tell the compiler to perform specific
+ * Intro - Operators tell the compiler to perform specific
  * mathematical operation, logical or relational
  * operation and produce a suitable response
  */
 
-contract learnArithmeticOperators {
+contract LearnArithmeticOperators {
     uint256 public a = 5;
     uint256 public b = 10;
 

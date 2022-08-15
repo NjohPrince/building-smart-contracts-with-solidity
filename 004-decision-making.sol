@@ -8,7 +8,7 @@ pragma solidity >=0.7.0 <0.9.0;
  * based on certain conditions or decision made
  */
 
-contract learnDecisionMaking {
+contract LearnDecisionMaking {
     // orange variable
     uint256 oranges = 5;
 
