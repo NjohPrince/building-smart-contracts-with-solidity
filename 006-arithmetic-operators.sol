@@ -48,4 +48,14 @@ contract learnArithmeticOperators {
         result = a % b;
         return result;
     }
+
+    // modulo trick
+    // the goal is to find the remainder
+    /*
+        12 % 23
+        1. divident = 12, divisor = 23
+        2. q = 12 / 23, q = 0
+        3. 0 * 23 = 0, newResult = 0
+        4. 12 - 0, remainder = 0
+    */
 }
