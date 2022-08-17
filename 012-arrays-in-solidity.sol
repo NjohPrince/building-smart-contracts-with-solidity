@@ -36,4 +36,10 @@ contract LearnArrays {
         // using the length property to get the length of the array
         return myArray.length;
     }
+
+    // remove a element at a particular index
+    function remove(uint256 index) public {
+        // using the delete keyword
+        delete myArray[index];
+    }
 }
