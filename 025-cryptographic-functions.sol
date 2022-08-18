@@ -18,10 +18,35 @@ pragma solidity >=0.7.0 <0.9.0;
 // Keccak is a leading hashing function, designed by non-NSA designers. Keccak won NIST competition to become the official SHA3
 // Keccak is a family of cryptographic sponge functions and is designed as an alternative to SHA-256
 
+// Oracle dynamic feeds
+// A database management system is not only used for storing the data but to effectively manage
+// it and provides high performance, authorized access and failure recovery features.
+
+contract Oracle {
+    address admin;
+    uint256 public rand;
+
+    constructor() {
+        admin = msg.sender;
+    }
+
+    // seed the rand variable
+    function seedRandom(uint256 _rand) external {
+        require(msg.sender == admin);
+        rand = _rand;
+    }
+}
+
 contract LearnCryptoGraphicFunctions {
     // we will leaverage this module on two things
     // 1. Modulo operator
     // 2. Cryptographic hashing
+
+    Oracle oracle;
+
+    constructor(address oracleAddress) {
+        oracle = Oracle(oracleAddress);
+    }
 
     function randMod(uint256 range) external view returns (uint256) {
         // grab information from the blockchain to randomly generate numbers
@@ -30,6 +55,7 @@ contract LearnCryptoGraphicFunctions {
             uint256(
                 keccak256(
                     abi.encodePacked(
+                        oracle.rand,
                         block.timestamp,
                         block.difficulty,
                         msg.sender
