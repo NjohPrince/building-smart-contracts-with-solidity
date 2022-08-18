@@ -27,6 +27,12 @@ contract Owner {
         // the underscore continues with the function that has the
         // modifier attached unto it
     }
+
+    modifier costPriceCheck(uint256 price) {
+        // msg.value: amount in wei being sent with a message to the contract
+        require(msg.value >= price);
+        _;
+    }
 }
 
 // inherits Owner --variables and functions
@@ -51,6 +57,14 @@ contract FunctionModifiers is Owner {
     // onlyOwner is our function modifier
     // which says only he owner can modify the price
     function changePrice(uint256 _price) public onlyOwner {
+        price = _price;
+    }
+
+    function changePriceUsingSecondModifier(uint256 _price)
+        public
+        payable
+        costPriceCheck(price)
+    {
         price = _price;
     }
 }
