@@ -40,6 +40,8 @@ contract LearnArrays {
     // remove a element at a particular index
     function remove(uint256 index) public {
         // using the delete keyword
+        // length of the array remains thesame
+        // deleted number will be replaced with a zero
         delete myArray[index];
     }
 }
