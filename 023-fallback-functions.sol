@@ -19,7 +19,7 @@ pragma solidity >=0.7.0 <0.9.0;
  * bu call method receives more(all of the gas).
  */
 
-contract LearnFallBackFunctions {
+contract FallBack {
     event Log(uint256 gas);
 
     fallback() external payable {
@@ -28,7 +28,7 @@ contract LearnFallBackFunctions {
         // invoke the send or transfer method: we get 2300 gas which is enough to emit a log
         // invoke the call method: we get all the gas
 
-        // special solidity function gasLeft returns how many gas is left
+        // special solidity function gasleft returns how many gas is left
         emit Log(gasleft());
     }
 
