@@ -1,5 +1,4 @@
-# building-smart-contracts-with-solidity
-Building smart contracts with solidity
+# Building Smart Contracts with Solidity
 
 - Create an account on [remix.ethereum.org](http://remix.ethereum.org/).
 - Run and test the smart contract code on the platform.
