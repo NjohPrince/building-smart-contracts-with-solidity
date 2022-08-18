@@ -28,7 +28,7 @@ contract LearnStructs {
     Movie commedyMovies;
 
     // set a movie
-    function setMoview() public {
+    function setMovie() public {
         movie = Movie("The Contrast Pair", "TheUnicornDev", 1);
     }
 
