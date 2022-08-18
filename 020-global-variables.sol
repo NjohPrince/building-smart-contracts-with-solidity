@@ -27,6 +27,7 @@ contract LedgerBalance {
 }
 
 // update the balance from another contract
+// interacting betwenn two contracts
 contract Updated {
     function updateBalance() public {
         // creating an instance of the LedgerBalance contract
@@ -34,5 +35,24 @@ contract Updated {
 
         // updating the balance
         ledgerBalance.updateBalance(40);
+    }
+}
+
+// Other global variables
+contract SimpleStorage {
+    uint256 storeData;
+
+    function set(uint256 x) public {
+        storeData = x;
+
+        // diffculty of the current block
+        storeData = block.difficulty;
+
+        // time of interaction with the blockchain
+        storeData = block.timestamp;
+    }
+
+    function get() public view returns (uint256) {
+        return storeData;
     }
 }
