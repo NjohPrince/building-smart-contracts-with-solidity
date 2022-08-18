@@ -19,6 +19,7 @@ contract LearnMapping {
     mapping(address => uint256) public myMap;
 
     // create a specific address
+    // NOTE: Keys in a map have to be unique
     function setAddress(address _addr, uint256 _i) public {
         myMap[_addr] = _i;
     }
@@ -30,6 +31,8 @@ contract LearnMapping {
 
     // remove an address
     function removeAddress(address _addr) public {
+        // replaces the value of the corresponding key to zero
+        // as when we were working with arrays
         delete myMap[_addr];
     }
 }
