@@ -1,0 +1,7 @@
+Blockchain
+
+- A blockchain in the most basic form is an audible database(a backend for storing information 
+or transactions). It can be regarded as a database in which data can only be added on.
+
+- It is a system in which a record of transactions made in bitcoin or another cryptocurrency are 
+maintained across several computers that are linked in a peer-to-peer network.
