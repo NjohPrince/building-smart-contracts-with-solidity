@@ -31,9 +31,13 @@ contract LearnFunctionOverLoading {
         return numberOne + numberTwo + numberThree;
     }
 
-    // function to test/call the functions above
-    function calculateSums() public pure {
-        calculateSum(3, 4);
-        calculateSum(3, 4, 1);
+    function calculateSumTwoArgs() public pure returns (uint256) {
+        uint256 result = calculateSum(3, 4);
+        return result;
+    }
+
+    function calculateSumThreeArgs() public pure returns (uint256) {
+        uint256 result = calculateSum(3, 4, 1);
+        return result;
     }
 }
