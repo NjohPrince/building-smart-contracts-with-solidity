@@ -19,5 +19,22 @@ pragma solidity >=0.7.0 <0.9.0;
 // Keccak is a family of cryptographic sponge functions and is designed as an alternative to SHA-256
 
 contract LearnCryptoGraphicFunctions {
+    // we will leaverage this module on two things
+    // 1. Modulo operator
+    // 2. Cryptographic hashing
 
+    function randMod(uint256 range) external view returns (uint256) {
+        // grab information from the blockchain to randomly generate numbers
+        // abi.encodePacked concatenates arguments nicely
+        return
+            uint256(
+                keccak256(
+                    abi.encodePacked(
+                        block.timestamp,
+                        block.difficulty,
+                        msg.sender
+                    )
+                )
+            ) % range;
+    }
 }
