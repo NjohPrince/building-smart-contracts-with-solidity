@@ -17,6 +17,22 @@ pragma solidity >=0.7.0 <0.9.0;
 // their uses and warnings.
 // https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html
 
-contract LearnGlobalVariables {
-    
+contract LedgerBalance {
+    mapping(address => uint256) balance;
+
+    // update the balance of the current sender, initiator of the transaction
+    function updateBalance(uint256 newBalance) public {
+        balance[msg.sender] = newBalance;
+    }
+}
+
+// update the balance from another contract
+contract Updated is LedgerBalance {
+    function updatesBalance() public {
+        // creating an instance of the LedgerBalance contract
+        LedgerBalance ledgerBalance = new LedgerBalance();
+
+        // updating the balance
+        ledgerBalance.updateBalance(40);
+    }
 }
