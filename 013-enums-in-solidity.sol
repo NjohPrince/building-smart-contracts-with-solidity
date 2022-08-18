@@ -34,6 +34,11 @@ contract LearnEnums {
         choice = frenchFriesSize.SMALL;
     }
 
+    // switch choice to large
+    function setLarge() public {
+        choice = frenchFriesSize.LARGE;
+    }
+
     // funcion to get the choice
     function getChoice() public view returns (frenchFriesSize) {
         return choice;
