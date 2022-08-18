@@ -24,4 +24,13 @@ contract LearnMappingAndStruct {
     ) public {
         movie[movieID] = Movie(title, director);
     }
+
+    // get a particular movie from the map
+    function getMovieFromMap(uint256 movieID)
+        public
+        view
+        returns (Movie memory)
+    {
+        return movie[movieID];
+    }
 }
