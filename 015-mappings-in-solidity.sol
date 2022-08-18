@@ -15,5 +15,21 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract LearnStructs {
     // syntax to declare a mapping type
-    
+    // address could be of any daatype
+    mapping(address => uint256) public myMap;
+
+    // create a specific address
+    function setAddress(address _addr, uint256 _i) public {
+        myMap[_addr] = _i;
+    }
+
+    // get data stores in a certain key - addr
+    function getAddress(address _addr) public view returns (uint256) {
+        return myMap[_addr];
+    }
+
+    // remove an address
+    function removeAddress(address _addr) public {
+        delete myMap[_addr];
+    }
 }
