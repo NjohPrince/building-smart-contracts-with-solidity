@@ -41,15 +41,21 @@ contract Updated {
 // Other global variables
 contract SimpleStorage {
     uint256 storeData;
+    uint256 difficulty;
+    uint256 timestamp;
+    uint256 number;
 
     function set(uint256 x) public {
         storeData = x;
 
         // diffculty of the current block
-        storeData = block.difficulty;
+        difficulty = block.difficulty;
 
         // time of interaction with the blockchain
-        storeData = block.timestamp;
+        timestamp = block.timestamp;
+
+        // block number
+        number = block.number;
     }
 
     function get() public view returns (uint256) {
