@@ -27,8 +27,8 @@ contract LedgerBalance {
 }
 
 // update the balance from another contract
-contract Updated is LedgerBalance {
-    function updatesBalance() public {
+contract Updated {
+    function updateBalance() public {
         // creating an instance of the LedgerBalance contract
         LedgerBalance ledgerBalance = new LedgerBalance();
 
