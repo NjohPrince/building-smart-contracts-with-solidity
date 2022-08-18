@@ -13,7 +13,7 @@ pragma solidity >=0.7.0 <0.9.0;
  * the keys in an array and you can't give them sizes
  */
 
-contract LearnStructs {
+contract LearnMapping {
     // syntax to declare a mapping type
     // address could be of any daatype
     mapping(address => uint256) public myMap;
