@@ -13,6 +13,10 @@ pragma solidity >=0.7.0 <0.9.0;
  * block.number - current block number
  */
 
+// helpful link to learn more about global variables and a lot of examples,
+// their uses and warnings.
+// https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html
+
 contract LearnGlobalVariables {
     
 }
