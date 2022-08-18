@@ -21,4 +21,12 @@ contract LearnEtherUnits {
         // assertion for the equivalent of 2 ethers in weis
         assert(2 ether == 2000000000000000000 wei);
     }
+
+    // working with time
+    function timeAssertion() public pure {
+        assert(1 minutes == 60 seconds);
+        assert(24 hours == 1440 minutes);
+        assert(1 days == 24 hours);
+        assert(1 weeks == 7 days);
+    }
 }
