@@ -43,7 +43,8 @@ contract CryptoTokensAndMinting {
     // send any amount of coins to an existing address
     function send(address receiver, uint256 amount) public {
         // require the senders balance to be greater that or equal to the amount to be sent
-        if (balances[msg.sender] >= amount) {
+        if (balances[msg.sender] < amount) {
+            // revert keyword will cancel the transaction
             revert insufficientBalance({
                 requested: amount,
                 available: balances[msg.sender]
