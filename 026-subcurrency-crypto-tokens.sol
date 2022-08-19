@@ -23,4 +23,14 @@ contract CryptoTokensAndMinting {
     constructor() {
         minter = msg.sender;
     }
+
+    // want to make new coins and send to an address
+    // only the owner can do this
+    function mint(address receiver, uint256 amount) public {
+        // make sure its the minter
+        require(msg.sender == minter);
+
+        // add amount to the receiver's previous balance
+        balances[receiver] += amount;
+    }
 }
