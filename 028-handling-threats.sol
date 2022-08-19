@@ -48,5 +48,9 @@ contract SecurityInSolidity {
     // function to claim refunds
     function claimRefund() public payable {
         require(balances[msg.sender] > 0);
+
+        // we make the address payable before initiating the send transaction
+        address payable convertedPayableAddress = payable(msg.sender);
+        convertedPayableAddress.transfer(balances[msg.sender]);
     }
 }
