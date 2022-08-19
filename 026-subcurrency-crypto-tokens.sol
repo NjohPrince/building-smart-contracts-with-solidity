@@ -9,6 +9,7 @@ pragma solidity >=0.7.0 <0.9.0;
  *
  * Anyone can send coins to each other without the need for regictering
  * with username and password, all you need is an Etherium keypair
+ *
  */
 
 contract CryptoTokensAndMinting {
@@ -48,7 +49,7 @@ contract CryptoTokensAndMinting {
     // only the owner can do this
     function mint(address receiver, uint256 amount) public {
         // make sure its the minter
-        require(msg.sender == minter);
+        require(msg.sender == minter, "Access Denied");
 
         // add amount to the receiver's previous balance
         balances[receiver] += amount;
@@ -57,10 +58,23 @@ contract CryptoTokensAndMinting {
     // set a bonus rate
     // only by the contract owner
     function setBonusRate(uint256 bonus) public {
-        require(msg.sender == minter);
+        require(msg.sender == minter, "Access Denied");
 
         // set a bonus rate
         bonusRate = bonus;
+    }
+
+    // check set bonus rate
+    function checkBonusRate() public view returns (uint256) {
+        return bonusRate;
+    }
+
+    // add eligible clients to benefit from bonus rate
+    function setEligibility(address _addr) public {
+        require(msg.sender == minter, "Access Denied");
+
+        // add client to map of eligible clients
+        bonuses[_addr] = bonusRate;
     }
 
     // error function to handle error in transactions
@@ -86,5 +100,24 @@ contract CryptoTokensAndMinting {
         emit Sent(msg.sender, receiver, amount);
     }
 
-    function requestMyBonus(address _addr) public {}
+    // check availability of a bonus for current account
+    function requestMyBonus() public view returns (uint256) {
+        if (bonusRate > 0) return bonuses[msg.sender];
+        return 0;
+    }
+
+    // request transfer of the current account's bonus to balances account
+    function requestToTransferMyBonus() public returns (string memory) {
+        if (bonuses[msg.sender] > 0) {
+            // add bonus to the requested account
+            balances[msg.sender] += bonusRate;
+
+            // reset account bonus to zero
+            bonuses[msg.sender] = 0;
+            return "Coins successfully transfered!";
+        }
+
+        return
+            "Transfer could not be established! Please check you bonus value and try again.";
+    }
 }
