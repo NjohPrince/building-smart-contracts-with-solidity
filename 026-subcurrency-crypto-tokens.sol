@@ -18,7 +18,14 @@ contract CryptoTokensAndMinting {
     address public minter;
     mapping(address => uint256) public balances;
 
-    // our clients can react
+    // our clients can react to specific
+    // contract changes you declare
+
+    // Event is an inheritable member of a contract. An event is emmited
+    // it stores the arguments passed in the transaction logs.
+
+    // These logs are stored on the blockchain and are accessible using the
+    // address of the contract untill the contract is present on the blockchain.
     event Sent(address from, address to, uint256 amount);
 
     // create a constructor
@@ -55,5 +62,8 @@ contract CryptoTokensAndMinting {
         // while the receiver has an increase in amount of coins in posesssion
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
+
+        // emit the event with the required details
+        emit Sent(msg.sender, receiver, amount);
     }
 }
