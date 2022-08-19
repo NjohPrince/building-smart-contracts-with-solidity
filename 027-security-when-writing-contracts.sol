@@ -28,18 +28,32 @@ contract SecurityInSolidity {
     }
 
     // function to return funds
-    function returnFunds() public onlyOwner returns (bool success) {
+    function returnFunds() public payable onlyOwner returns (bool success) {
         for (uint256 i = 0; i < funders.length; i++) {
             funders[i].transfer(contributedAmount);
         }
         return true;
     }
 
+    // From the above function:
+    // 1. What if the owner chickens out and does not return the funds
+    // 2. The loop is unbound considering that the total funders is unknown
+    // it could run out of gas before allocaing all the funds, what an attacker could
+    // just do is to make a small bunch of contributions .0000284289
+
     // function transfer funds between two addresses
-    function returnFundsTwoAddresses() public onlyOwner returns (bool success) {
+    function returnFundsTwoAddresses()
+        public
+        payable
+        onlyOwner
+        returns (bool success)
+    {
         tatiana.transfer(contributedAmount);
         john.transfer(contributedAmount);
 
         return true;
     }
+
+    // What could go wrong in this case?
+    // 1.
 }
