@@ -16,7 +16,17 @@ contract CryptoTokensAndMinting {
     // making the variables accessible from other contracts
 
     address public minter;
+
+    // bonus rate only configurable by the contract owner
+    // set to an initial value of 0
+    uint256 bonusRate = 0;
+
+    // account balances
     mapping(address => uint256) public balances;
+
+    // bonuses --each client account will be entitled to a bonus
+    // depending on hopw they work.
+    mapping(address => uint256) public bonuses;
 
     // our clients can react to specific
     // contract changes you declare
@@ -44,6 +54,15 @@ contract CryptoTokensAndMinting {
         balances[receiver] += amount;
     }
 
+    // set a bonus rate
+    // only by the contract owner
+    function setBonusRate(uint256 bonus) public {
+        require(msg.sender == minter);
+
+        // set a bonus rate
+        bonusRate = bonus;
+    }
+
     // error function to handle error in transactions
     error insufficientBalance(uint256 requested, uint256 available);
 
@@ -66,4 +85,6 @@ contract CryptoTokensAndMinting {
         // emit the event with the required details
         emit Sent(msg.sender, receiver, amount);
     }
+
+    function requestMyBonus(address _addr) public {}
 }
