@@ -30,10 +30,16 @@ contract LearnStructs {
     // set a movie
     function setMovie() public {
         movie = Movie("The Contrast Pair", "TheUnicornDev", 1);
+        horrorMovies = Movie("Targetting TheTarget", "AbstractDev", 1);
     }
 
     // get the movie
     function getMovieID() public view returns (uint256) {
         return movie.movieID;
+    }
+
+    // wanna watch horror movie --lets get you what you want
+    function getHorrorMovieID() public view returns (uint256) {
+        return horrorMovies.movieID;
     }
 }

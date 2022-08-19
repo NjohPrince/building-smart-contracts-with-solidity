@@ -44,4 +44,15 @@ contract LearnArrays {
         // deleted number will be replaced with a zero
         delete myArray[index];
     }
+
+    // trick to remove an element completely from an array
+    // but changes the positions of the elements in the array
+
+    // swap the element and the element at the last position
+    function trickyRemove(uint256 index) public {
+        uint256 temp = myArray[myArray.length - 1];
+        myArray[myArray.length - 1] = myArray[index];
+        myArray[index] = temp;
+        myArray.pop();
+    }
 }

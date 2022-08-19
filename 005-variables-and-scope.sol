@@ -51,7 +51,7 @@ contract LearnVariableAndScope {
         // calls function z to execution
         return z();
 
-        // test execution for funcion b
+        // test execution for function b
         // return b();
     }
 }

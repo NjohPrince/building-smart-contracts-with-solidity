@@ -20,7 +20,7 @@ contract LearnDecisionMaking {
             // then
             return true;
         } else {
-            return true;
+            return false;
         }
     }
 
@@ -34,5 +34,11 @@ contract LearnDecisionMaking {
         } else {
             return stakingWallet + 1;
         }
+    }
+
+    function airDropTwo() public view returns (uint256) {
+        if (stakingWallet == 10) return stakingWallet + 10;
+
+        return stakingWallet + 1;
     }
 }
