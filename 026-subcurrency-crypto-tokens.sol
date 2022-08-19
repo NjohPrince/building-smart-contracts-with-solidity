@@ -37,10 +37,18 @@ contract CryptoTokensAndMinting {
         balances[receiver] += amount;
     }
 
+    // error function to handle error in transactions
+    error insufficientBalance(uint256 requested, uint256 available);
+
     // send any amount of coins to an existing address
     function send(address receiver, uint256 amount) public {
-        // require the senders balance to be greater that or equal to the anount to be sent
-        require(balances[msg.sender] >= amount);
+        // require the senders balance to be greater that or equal to the amount to be sent
+        if (balances[msg.sender] >= amount) {
+            revert insufficientBalance({
+                requested: amount,
+                available: balances[msg.sender]
+            });
+        }
 
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
