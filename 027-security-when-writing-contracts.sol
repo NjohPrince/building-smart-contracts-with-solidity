@@ -55,5 +55,13 @@ contract SecurityInSolidity {
     }
 
     // What could go wrong in this case?
-    // 1.
+    // 1. What if tatiana rejects the transfer
+    // - The function is going to break or fail and john is not going to get paid
+
+    // Thinking that all contracts and accounts would want to receive or accept
+    // funds automatically is intuitive at first; but it is infact very naive and dangerous
+    // to build your code like this.
+
+    // If it is in their interest to reject the funds they will
+
 }
