@@ -18,6 +18,9 @@ contract CryptoTokensAndMinting {
     address public minter;
     mapping(address => uint256) public balances;
 
+    // our clients can react
+    event Sent(address from, address to, uint256 amount);
+
     // create a constructor
     // REMINDER: The constructor only runs when we deploy the contract
     constructor() {
@@ -31,6 +34,15 @@ contract CryptoTokensAndMinting {
         require(msg.sender == minter);
 
         // add amount to the receiver's previous balance
+        balances[receiver] += amount;
+    }
+
+    // send any amount of coins to an existing address
+    function send(address receiver, uint256 amount) public {
+        // require the senders balance to be greater that or equal to the anount to be sent
+        require(balances[msg.sender] >= amount);
+
+        balances[msg.sender] -= amount;
         balances[receiver] += amount;
     }
 }
