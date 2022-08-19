@@ -46,6 +46,7 @@ contract SecurityInSolidity {
     // A global method which comes on handy here is the: msg.sender
 
     // function to claim refunds
+    // this eliminates outside interference very greatly
     function claimRefund() public payable {
         require(balances[msg.sender] > 0);
 
