@@ -51,6 +51,8 @@ contract CryptoTokensAndMinting {
             });
         }
 
+        // the sender has a reduction in amount of coins in possession
+        // while the receiver has an increase in amount of coins in posesssion
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
     }
