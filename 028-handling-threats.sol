@@ -62,12 +62,12 @@ contract withDrawal {
     mapping(address => uint256) public balances;
 
     function withDraw(uint256 amount) public payable returns (bool success) {
-        require(balances[msg.sender] >= amount);
+        require(balances[msg.sender] >= amount); // guards upfront
 
-        balances[msg.sender] -= amount;
+        balances[msg.sender] -= amount; // optimistic accounting
         address payable convertedPayableAddress = payable(msg.sender);
 
-        convertedPayableAddress.transfer(amount);
+        convertedPayableAddress.transfer(amount); // transfer
         return true;
     }
 }

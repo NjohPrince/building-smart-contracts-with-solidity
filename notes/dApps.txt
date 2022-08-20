@@ -1,0 +1,9 @@
+dApps
+
+- A dApp is a decentralized application that runs on a blockchain 
+
+- A decentralized application (dapp) is an application built on a decentralized 
+network that combines a smart contract and a frontend user interface.
+
+- Because dApps are decentralized, they are free from the control and interference 
+of a single authority.
