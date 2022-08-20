@@ -10,6 +10,7 @@ pragma solidity >=0.7.0 <0.9.0;
 // contract C
 contract C {
     uint256 private data;
+    uint256 public info;
 }
 
 // contract D
@@ -17,8 +18,11 @@ contract D is C {
     function accessContentFromContractC() public view returns (uint256) {
         // throws an error
         // as variable data is not public
-        
+
         // return data;
+
+        // this works
+        return info;
     }
 }
 
