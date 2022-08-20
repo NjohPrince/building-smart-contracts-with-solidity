@@ -23,7 +23,7 @@ contract C {
     }
 
     // assign value to data
-    function dupdateData(uint256 a) public {
+    function updateData(uint256 a) public {
         data = a;
     }
 
@@ -43,15 +43,9 @@ contract D {
     // creating an instance of contract C
     C c = new C();
 
-    // function accessContentFromContractC() public view returns (uint256) {
-    //     // throws an error
-    //     // as variable data is not public
-
-    //     // return data;
-
-    //     // this works
-    //     return info;
-    // }
+    function readInfo() public view returns (uint256) {
+        
+    }
 }
 
 // contract E
