@@ -13,7 +13,7 @@ contract LearnVariableAndScope {
     // private variable - can't be accessed out of the contract
     uint256 private dataTwo = 50;
 
-    // inernal variable - can be accessed within this contract and
+    // internal variable - can be accessed within this contract and
     // contracts that inherit this contract
     // private with a lesser restriction power
     uint256 internal dataThree = 50;

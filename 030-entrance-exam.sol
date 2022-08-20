@@ -31,6 +31,11 @@ contract C {
     function getData() public view returns (uint256) {
         return data;
     }
+
+    // compute sum between two numbers
+    function compute(uint256 a, uint256 b) internal pure returns (uint256) {
+        return a + b;
+    }
 }
 
 // contract D
