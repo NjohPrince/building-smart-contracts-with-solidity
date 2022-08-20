@@ -37,6 +37,11 @@ contract LearnArrays {
         return myArray.length;
     }
 
+    // get array element at a particular index
+    function getElementAtIndex(uint256 index) public view returns (uint256) {
+        return myArray[index];
+    }
+
     // remove a element at a particular index
     function remove(uint256 index) public {
         // using the delete keyword
