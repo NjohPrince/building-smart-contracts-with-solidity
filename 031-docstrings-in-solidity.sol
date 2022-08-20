@@ -14,7 +14,7 @@ pragma solidity >=0.7.0 <0.9.0;
  * @author Njoh Noh Prince Junior => author's name
  * context of use: contracts, interfaces and functions
  *
- * @dev => exra details
+ * @dev => extra details
  * context of use: contracts, interfaces and functions
  */
 
@@ -29,5 +29,15 @@ contract DocStrings {
      */
     function someRandomFunction(address _addr) public pure returns (address) {
         return _addr;
+    }
+
+    address storedStateAddress;
+
+    /**
+     * @param _addr: address
+     * @dev changes the state variable storedStateAddress to a new one
+     */
+    function storeNewAddress(address _addr) public {
+        storedStateAddress = _addr;
     }
 }
