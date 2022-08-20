@@ -41,9 +41,14 @@ contract RestrictedAccess {
         delete owner;
     }
 
+    // add more ethers to the owner
+    // not the best way but this will do
+    // for this case.
+    uint256 balance = msg.value + 200 ether;
+
     // cost restriction
     modifier costs(uint256 _amount) {
-        require(msg.value > _amount, "Not enough Ether provided!");
+        require(balance > _amount, "Not enough Ether provided!");
         _;
     }
 
