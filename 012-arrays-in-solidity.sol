@@ -50,9 +50,16 @@ contract LearnArrays {
 
     // swap the element and the element at the last position
     function trickyRemove(uint256 index) public {
+        // assign the last element within the array unto a temp variable
         uint256 temp = myArray[myArray.length - 1];
+
+        // send the element to be deleted to the end of the array
         myArray[myArray.length - 1] = myArray[index];
+
+        // assign the last element to the element to be deleted position
         myArray[index] = temp;
+
+        // pop the last element within the array
         myArray.pop();
     }
 }
