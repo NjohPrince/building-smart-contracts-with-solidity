@@ -49,6 +49,7 @@ contract D {
 }
 
 // contract E
-contract E {
-
+// inheriting contract C using the special keyword is
+contract E is C {
+    
 }
