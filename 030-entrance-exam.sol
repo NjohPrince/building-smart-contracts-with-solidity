@@ -26,6 +26,11 @@ contract C {
     function dupdateData(uint256 a) public {
         data = a;
     }
+
+    // get the value stored in data
+    function getData() public view returns (uint256) {
+        return data;
+    }
 }
 
 // contract D
