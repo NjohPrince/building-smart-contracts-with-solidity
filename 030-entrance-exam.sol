@@ -13,16 +13,17 @@ contract C {
     uint256 public info;
 
     // constructor --runs only once the contract is deployed
+    // sets the initial value of info to 10
     constructor() {
         info = 10;
     }
 
-    // increment a given number
+    // increment a given number by 1 and return the result
     function increment(uint256 a) private pure returns (uint256) {
         return a + 1;
     }
 
-    // assign value to data
+    // assign a given value to data
     function updateData(uint256 a) public {
         data = a;
     }
@@ -32,7 +33,8 @@ contract C {
         return data;
     }
 
-    // compute sum between two numbers
+    // compute the sum between two numbers
+    // and it returns the sum of the two numbers
     function compute(uint256 a, uint256 b) internal pure returns (uint256) {
         return a + b;
     }
@@ -43,7 +45,7 @@ contract D {
     // creating an instance of contract C
     C c = new C();
 
-    // read he data saved in info variable in contract C
+    // read the data saved in info variable in contract C
     function readInfo() public view returns (uint256) {
         return c.info();
     }
