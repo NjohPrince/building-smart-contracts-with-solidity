@@ -11,6 +11,10 @@ pragma solidity >=0.7.0 <0.9.0;
 contract C {
     uint256 private data;
     uint256 public info;
+
+    constructor() {
+        info = 10;
+    }
 }
 
 // contract D
