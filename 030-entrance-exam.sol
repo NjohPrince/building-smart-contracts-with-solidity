@@ -39,16 +39,19 @@ contract C {
 }
 
 // contract D
-contract D is C {
-    function accessContentFromContractC() public view returns (uint256) {
-        // throws an error
-        // as variable data is not public
+contract D {
+    // creating an instance of contract C
+    C c = new C();
 
-        // return data;
+    // function accessContentFromContractC() public view returns (uint256) {
+    //     // throws an error
+    //     // as variable data is not public
 
-        // this works
-        return info;
-    }
+    //     // return data;
+
+    //     // this works
+    //     return info;
+    // }
 }
 
 // contract E
