@@ -43,6 +43,7 @@ contract D {
     // creating an instance of contract C
     C c = new C();
 
+    // read he data saved in info variable in contract C
     function readInfo() public view returns (uint256) {
         return c.info();
     }
@@ -51,5 +52,21 @@ contract D {
 // contract E
 // inheriting contract C using the special keyword is
 contract E is C {
-    
+    uint256 private result;
+    C private c;
+
+    // instantiate variable c to an instance of contract C
+    constructor() {
+        c = new C();
+    }
+
+    // run the compute function from contract C
+    function getComputedResult() public pure {
+        compute(23, 5);
+    }
+
+    // read he data saved in info variable in contract C
+    function readInfo() public view returns (uint256) {
+        return info;
+    }
 }
