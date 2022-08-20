@@ -44,7 +44,7 @@ contract D {
     C c = new C();
 
     function readInfo() public view returns (uint256) {
-        
+        return c.info();
     }
 }
 
