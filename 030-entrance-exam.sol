@@ -21,6 +21,11 @@ contract C {
     function increment(uint256 a) private pure returns (uint256) {
         return a + 1;
     }
+
+    // assign value to data
+    function dupdateData(uint256 a) public {
+        data = a;
+    }
 }
 
 // contract D
