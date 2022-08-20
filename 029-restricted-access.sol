@@ -13,21 +13,31 @@ contract RestrictedAccess {
     address public owner = msg.sender;
     uint256 public creationTime = block.timestamp;
 
-    modifier onlyByOwner(address _account) {
+    modifier onlyBy(address _account) {
         // check if the current sender is the owner
         // require(msg.sender == owner);
         require(msg.sender == _account, "Access Restricted to Owners Only!");
         _;
     }
 
+    modifier onlyAfter(uint256 _time) {
+        require(block.timestamp >= _time, "Function called to early!");
+        _;
+    }
+
     // function that changes the owner address
     // restrict this access only to the owner of the contract
-    function changeOwnerAddress(address newAddres) public onlyByOwner(owner) {
+    function changeOwnerAddress(address newAddres) public onlyBy(owner) {
         owner = newAddres;
     }
 
-    // funcion to disown the current owner
-    function disownOwner() public {
+    // function to disown the current owner
+    // only run the contract after three weeks of creation
+    function disownOwner()
+        public
+        onlyBy(owner)
+        onlyAfter(creationTime + 3 weeks)
+    {
         delete owner;
     }
 }
