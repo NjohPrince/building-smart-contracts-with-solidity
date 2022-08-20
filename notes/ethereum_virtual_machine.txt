@@ -19,7 +19,7 @@ External accounts
 
 Contracts accounts
 - Build and controlled by the developers
-- Key determined when the contract is being created
+- Here the Key determined when the contract is being created
 
 When transfering ethers from one account to another we make use of the public
 key, to add when we want to deal or bring up an account itself we work with the

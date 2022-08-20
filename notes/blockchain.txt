@@ -11,7 +11,8 @@ maintained across several computers that are linked in a peer-to-peer network.
 KEY TAKEAWAYS
 
 - Blockchain is a type of shared database that differs from a typical database in the way that 
-it stores information; blockchains store data in blocks that are then linked together via cryptography.
+it stores information; blockchains store data in blocks that are then linked together via cryptography
+or using a crpyographic algorithm.
 
 - As new data comes in, it is entered into a fresh block. Once the block is filled with data, it is chained 
 onto the previous block, which makes the data chained together in chronological order.
