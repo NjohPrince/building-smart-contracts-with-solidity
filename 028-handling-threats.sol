@@ -31,7 +31,7 @@ contract SecurityInSolidity {
     // which reverts the code; we can use the send method which returns
     // a boolean
     function sendRefund() public payable onlyOwner returns (bool success) {
-        // though not he best but considerately solves a problem
+        // though not the best but considerately solves a problem
         if (!tatiana.send(contributedAmount)) {
             // do something
         } else {
@@ -53,5 +53,21 @@ contract SecurityInSolidity {
         // we make the address payable before initiating the send transaction
         address payable convertedPayableAddress = payable(msg.sender);
         convertedPayableAddress.transfer(balances[msg.sender]);
+    }
+
+    // BY MAKING OUR TRANSACTIONS ONE AT A TIME we greatly reduce danger to our executions
+}
+
+contract withDrawal {
+    mapping(address => uint256) public balances;
+
+    function withDraw(uint256 amount) public payable returns (bool success) {
+        require(balances[msg.sender] >= amount);
+
+        balances[msg.sender] -= amount;
+        address payable convertedPayableAddress = payable(msg.sender);
+
+        convertedPayableAddress.transfer(amount);
+        return true;
     }
 }
