@@ -12,8 +12,14 @@ contract C {
     uint256 private data;
     uint256 public info;
 
+    // constructor --runs only once the contract is deployed
     constructor() {
         info = 10;
+    }
+
+    // increment a given number
+    function increment(uint256 a) private pure returns (uint256) {
+        return a + 1;
     }
 }
 
