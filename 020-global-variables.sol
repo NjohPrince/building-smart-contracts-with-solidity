@@ -27,7 +27,7 @@ contract LedgerBalance {
 }
 
 // update the balance from another contract
-// interacting betwenn two contracts
+// interaction between two contracts
 contract Updated {
     function updateBalance() public {
         // creating an instance of the LedgerBalance contract
