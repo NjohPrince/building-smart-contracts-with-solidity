@@ -38,6 +38,21 @@ interface UniswapV2Pair {
 
 contract MyContract {
     address private factoryAddress = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;
+
+    // below are some etherium tokens running on the mainnet
+
+    // gotten from ethercan.io --Dai Stablecoin's contract address
     address private dai = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    
+
+    // etherscan --Wrapped Ether's contract address
+    address private weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+
+    function getReservedTokens() external view returns (uint256, uint256) {
+        address pair = UniswapV2Factory(factoryAddress).getPair(dai, weth);
+
+        // getting the reserves
+        (uint256 reserve0, uint256 reserve1, ) = UniswapV2Pair(pair)
+            .getReserves();
+        return (reserve0, reserve1);
+    }
 }
