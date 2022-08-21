@@ -31,3 +31,23 @@ contract DerivedContract is LearnMoreOnEvents {
         return "Hello World!";
     }
 }
+
+// technically the contract is still abstract since it has atleast one
+// funtion without an implementation.
+contract Member {
+    string name;
+    uint256 age = 25;
+
+    function setName() public virtual returns (string memory) {}
+
+    function getAge() public view returns (uint256) {
+        return age;
+    }
+}
+
+// derived contract
+contract Teacher is Member {
+    function setName() public override pure returns (string memory) {
+        return "TheUnicornDev237";
+    }
+}
