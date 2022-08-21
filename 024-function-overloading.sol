@@ -35,14 +35,15 @@ contract LearnFunctionOverLoading {
     // 😅 Sum two strings --concatenation of two strings
     function calculateSum(string memory first, string memory second)
         public
+        pure
         returns (string memory)
     {
         // return the concatenation of both strings
-        return first + second;
+        return string.concat(first, second);
     }
 
     // concatenate two names
-    function concatenateTwoString() public returns (string memory) {
+    function concatenateTwoString() public pure returns (string memory) {
         string memory fullName = calculateSum("Njoh Noh", "Prince Junior");
         return fullName;
     }
