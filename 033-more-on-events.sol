@@ -14,7 +14,14 @@ contract LearnMoreOnEvents {
 
     // example event declaration to funds transfer
     // use the CamelCase convention for naming your events
-    event NewTrade(uint256 data, address from, address to, uint256 amount);
+    // only use 3 indexed per events - which enables the outside
+    // consumer to filter what they need
+    event NewTrade(
+        uint256 indexed data,
+        address indexed from,
+        address to,
+        uint256 indexed amount
+    );
 
     // function to perform a trade
     function trade(address to, uint256 amount) external {
