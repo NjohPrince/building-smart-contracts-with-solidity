@@ -63,11 +63,16 @@ contract E is C {
     }
 
     // run the compute function from contract C
-    function getComputedResult() public pure {
-        compute(23, 5);
+    function getComputedResult() public {
+        result = compute(23, 5);
     }
 
-    // read he data saved in info variable in contract C
+    // get the value store in result
+    function getResult() public view returns (uint256) {
+        return result;
+    }
+
+    // read the data saved in info variable in contract C
     function readInfo() public view returns (uint256) {
         return info;
     }
