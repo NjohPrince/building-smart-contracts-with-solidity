@@ -17,10 +17,32 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 
 // contract C
-contract AdvancedInheritance {}
+contract AdvancedInheritance {
+
+}
 
 contract FirstContract {}
 
 // second contract inheriting the first contract
-contract secondContract is FirstContract {}
+contract secondContract is FirstContract {
 
+}
+
+// Exercise
+contract A {
+    uint256 public innerVal = 100;
+
+    function innerAddTen(uint256 value) public pure returns (uint256) {
+        return value + 10;
+    }
+}
+
+contract B is A {
+    function runInnerAddTenFromA(uint256 value) public pure returns (uint256) {
+        return A.innerAddTen(value);
+    }
+
+    function getInnerVal() public view returns (uint256) {
+        return innerVal;
+    }
+}
