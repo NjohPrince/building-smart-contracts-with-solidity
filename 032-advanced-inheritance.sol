@@ -17,6 +17,10 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 
 // contract C
-contract AdvancedInheritance {
-    
-}
+contract AdvancedInheritance {}
+
+contract FirstContract {}
+
+// second contract inheriting the first contract
+contract secondContract is FirstContract {}
+
