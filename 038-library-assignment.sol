@@ -7,7 +7,6 @@ pragma solidity >=0.7.0 <0.9.0;
  */
 
 library Calculator {
-    
     function performArithmeticOperation(
         uint256 value1,
         uint256 value2,
