@@ -36,6 +36,10 @@ contract LearnErrorHandling {
         finalCalc += 3;
     }
 
+    function internalTestUnits() public view {
+        assert(finalCalc != 6);
+    }
+
     // machine that controls the weather
     function weatherChange() public {
         sunny = false;
@@ -53,6 +57,25 @@ contract LearnErrorHandling {
             umbrella = true;
         } else {
             revert("No need to bring an umbrella today!");
+        }
+    }
+}
+
+contract Vendor {
+    address seller;
+
+    // modifier to let the msg.sender be the seller
+    modifier onlySeller() {
+        require(msg.sender == seller, "Only the seller can sell this!");
+        _;
+    }
+
+    // function to sell --only if you are the seller
+    function sell(uint256 amount) public payable onlySeller {
+        if (amount > msg.value) {
+            // revert the contract if the funds in msg.sender is smaller
+            // than the requested amount or price of the good.
+            revert("There is not enought Ether provided!");
         }
     }
 }
