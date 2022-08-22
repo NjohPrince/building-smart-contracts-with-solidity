@@ -59,9 +59,7 @@ contract Auction {
     // to be emitted when the auction time has ended
     event auctionTimeEnded(address winner, uint256 amount);
 
-    constructor(uint256 _biddingTime, address payable _beneficiaryAddress)
-        public
-    {
+    constructor(uint256 _biddingTime, address payable _beneficiaryAddress) {
         // instantiating the beneficiary address and auction end time
         // during contract deployment
         beneficiary = _beneficiaryAddress;
@@ -73,6 +71,12 @@ contract Auction {
         // before a bid is made we have to verify that the
         // auction has not ended before
         if (block.timestamp > auctionEndTime) {
+            // emit auction time ended event
+            emit auctionTimeEnded(highestBidder, highestBid);
+
+            // transfer the highest bid unto the beneficiary
+            beneficiary.transfer(highestBid);
+
             revert("The auction has ended!");
         }
 
@@ -104,5 +108,13 @@ contract Auction {
             // we reset your bid amount to zero
             bidsTracker[msg.sender] = 0;
         }
+
+        // this makes sure the address is payable
+        // and can receive funds
+        if (!payable(msg.sender).send(amount)) {
+            bidsTracker[msg.sender] = amount;
+        }
+
+        return true;
     }
 }
