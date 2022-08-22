@@ -53,10 +53,28 @@ contract Auction {
     // to be emitted when the auction time has ended
     event auctionTimeEnded(address winner, uint256 amount);
 
-    constructor(uint256 _biddingTime, address payable _beneficiary) public {
+    constructor(uint256 _biddingTime, address payable _beneficiaryAddress)
+        public
+    {
         // instantiating the beneficiary address and auction end time
         // during contract deployment
-        beneficiary = _beneficiary;
+        beneficiary = _beneficiaryAddress;
         auctionEndTime = block.timestamp + _biddingTime;
+    }
+
+    // the bid function
+    function bid() public payable {
+        // before a bid is made we have to verify that the
+        // auction has not ended before
+        if (block.timestamp > auctionEndTime) {
+            revert("The auction has ended!");
+        }
+
+        // make sure they have sufficient funds to bid
+        if (msg.value <= highestBid) {
+            revert("Sorry your bid id not high enough!");
+        }
+
+        
     }
 }
