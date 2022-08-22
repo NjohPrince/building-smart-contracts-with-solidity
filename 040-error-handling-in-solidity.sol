@@ -25,6 +25,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract LearnErrorHandling {
     bool public sunny = true;
+    bool public umbrella = false;
     uint256 finalCalc = 0;
 
     // solar panel machine
@@ -38,5 +39,20 @@ contract LearnErrorHandling {
     // machine that controls the weather
     function weatherChange() public {
         sunny = false;
+    }
+
+    // get finalCalc value
+    function getCalc() public view returns (uint256) {
+        return finalCalc;
+    }
+
+    // determine if user should bring an unbrella
+    // or not
+    function bringUmbrella() public {
+        if (!sunny) {
+            umbrella = true;
+        } else {
+            revert("No need to bring an umbrella today!");
+        }
     }
 }
