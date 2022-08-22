@@ -39,7 +39,13 @@ contract Auction {
     address payable public beneficiary;
 
     // address of the highest bidder
-    // address public highestBidder;
+    address public highestBidder;
+
+    // to keep track of the bids in progress
+    // until the end of the bidding process,
+    // when the auction is over or when we
+    // have a highest bidder
+    mapping(address => uint256) bidsTracker;
 
     // keep tract of the auction end time
     uint256 public auctionEndTime;
@@ -72,9 +78,31 @@ contract Auction {
 
         // make sure they have sufficient funds to bid
         if (msg.value <= highestBid) {
-            revert("Sorry your bid id not high enough!");
+            revert("Sorry your bid is not high enough!");
         }
 
-        
+        if (highestBid > 0) {
+            bidsTracker[highestBidder] += highestBid;
+        }
+
+        // we have a new highest bidder
+        highestBidder = msg.sender;
+        highestBid = msg.value;
+
+        // emit the event so we are notified
+        // the highest bid price has increased
+        // hence we have a new highest bidder
+        emit highestBidPriceIncreased(msg.sender, msg.value);
+    }
+
+    // withdrawal function --following from the withdrawal pattern
+    function withdraw() public payable returns (bool success) {
+        uint256 amount = bidsTracker[msg.sender];
+
+        // make sure we get only one withdrawal
+        if (amount > 0) {
+            // we reset your bid amount to zero
+            bidsTracker[msg.sender] = 0;
+        }
     }
 }
