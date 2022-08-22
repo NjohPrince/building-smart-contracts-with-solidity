@@ -34,4 +34,9 @@ contract LearnErrorHandling {
         require(sunny, "It is not sunny today!");
         finalCalc += 3;
     }
+
+    // machine that controls the weather
+    function weatherChange() public {
+        sunny = false;
+    }
 }
